@@ -1,0 +1,18 @@
+/* src/index.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .br-line {
+    @apply w-32 h-[2px] bg-gradient-to-r from-beige to-transparent opacity-70 my-8 animate-pulse;
+  }
+
+  .project-link {
+    @apply block text-lg md:text-xl font-light border-b border-beige/30 hover:border-beige transition duration-300 py-2;
+  }
+
+  .section-wrapper {
+    @apply w-full max-w-4xl mx-auto px-4 md:px-6;
+  }
+}
