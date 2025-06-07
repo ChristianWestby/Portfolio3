@@ -1,13 +1,42 @@
 export default function Footer() {
   return (
-    <footer className="bg-[#0f172a] text-beige text-sm py-8 px-4 md:px-8 mt-20">
-      <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4 text-center md:text-left">
-        <div className="font-semibold tracking-wide">© {new Date().getFullYear()} Christian Westby</div>
-        <div className="space-x-4">
-          <a href="/" className="hover:underline transition">Hjem</a>
-          <a href="#prosjekter" className="hover:underline transition">Prosjekter</a>
-          <a href="mailto:christianwestby@stud.noroff.no" className="hover:underline transition">Kontakt</a>
+    <footer className="bg-[#1c293a] text-beige px-6 pt-20 pb-10 border-t border-beige/30 mt-20 text-sm">
+      <div className="max-w-6xl mx-auto flex flex-col md:flex-row gap-12 flex-wrap justify-between">
+        {/* Info og kontakt */}
+        <div className="flex-1 min-w-[250px] text-center md:text-left">
+          <div className="mb-6">
+            <p className="text-lg font-semibold tracking-wide">Christian Westby</p>
+            <p className="text-sm opacity-80">Frontend Developer</p>
+          </div>
+          <div className="space-y-1">
+            <p>E-post: <a href="mailto:christianwestby@stud.noroff.no" className="underline">christianwestby@stud.noroff.no</a></p>
+            <p>Basert i Oslo, Norge</p>
+          </div>
         </div>
+
+        {/* Navigasjon */}
+        <div className="flex-1 min-w-[250px]">
+          <p className="uppercase font-semibold mb-4">Lenker</p>
+          <ul className="space-y-2">
+            <li><a href="#" className="hover:underline">Hjem</a></li>
+            <li><a href="#prosjekter" className="hover:underline">Prosjekter</a></li>
+            <li><a href="#om" className="hover:underline">Om meg</a></li>
+          </ul>
+        </div>
+
+        {/* Nyhetsbrev eller sosialt */}
+        <div className="flex-1 min-w-[250px]">
+          <p className="uppercase font-semibold mb-4">Følg meg</p>
+          <ul className="space-y-2">
+            <li><a href="https://linkedin.com/in/christianwestby" className="hover:underline">LinkedIn</a></li>
+            <li><a href="https://github.com/ChristianWestby" className="hover:underline">GitHub</a></li>
+          </ul>
+        </div>
+      </div>
+
+      {/* Copyright */}
+      <div className="mt-16 border-t border-beige/30 pt-6 text-center text-xs text-beige/70 max-w-md mx-auto">
+        &copy; {new Date().getFullYear()} Christian Westby. Alle rettigheter reservert.
       </div>
     </footer>
   );
