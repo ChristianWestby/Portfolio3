@@ -6,6 +6,9 @@ export default {
       colors: {
         beige: '#f5f5dc',
       },
+      fontFamily: {
+      montserrat: ['Montserrat', 'sans-serif'],
+      },
     },
   },
   plugins: [],
