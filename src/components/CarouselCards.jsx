@@ -1,6 +1,8 @@
 import { Link } from 'react-router-dom';
 import ProjectLinks from '@components/ProjectLinks';
 import Profilbilde2 from '@images/Profilbilde2.png'; 
+import BrLine200 from './BrLine200';
+import BrLineLight from './BrLineLight';
 
 export default function CarouselCards() {
   return (
@@ -11,9 +13,10 @@ export default function CarouselCards() {
         <img
           src={Profilbilde2}
           alt="Christian Westby"
-          className="w-24 h-24 rounded-full object-cover mb-4 border border-beige/30"
+          className="w-40 h-40 rounded-full object-cover mb-4 border border-beige/30"
         />
-        <h3 className="text-xl font-semibold mb-2">Om meg</h3>
+        <h3 className="text-xl font-thin mb-2">Om meg</h3>
+        <BrLineLight />
         <p className="text-sm text-white text-center">
           Frontend-utvikler med interesse for visuell kode, design og digitale opplevelser.
         </p>
@@ -27,7 +30,8 @@ export default function CarouselCards() {
 
       {/* Kort 2 – Prosjekter */}
       <div className="min-w-[300px] max-w-[350px] bg-[#1c293a] text-white border border-beige/30 p-6 shadow-lg flex flex-col justify-between rounded-xl">
-        <h3 className="text-xl font-semibold mb-4 text-center">Prosjekter</h3>
+        <h3 className="text-xl font-thin mb-4 text-center">Prosjekter</h3>
+        <BrLineLight />
         <div className="flex-1">
           <ProjectLinks />
         </div>

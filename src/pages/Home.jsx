@@ -34,16 +34,15 @@ export default function Home() {
       </section>
 
       {/* Carousel Cards seksjon */}
-      <Section className="bg-[#1c293a] text-beige border-t border-gray-800  py-12">
+      <Section className="bg-[#1c293a] text-beige border-gray-800  py-12">
         <CarouselCards />
       </Section>
 
       {/* Prosjekter */}
       <section className="w-full max-w-5xl mt-28 px-4 mx-auto">
-        <h2 className="text-2xl md:text-3xl font-semibold tracking-wide text-center mb-10">
-          Utvalgte prosjekter
-        </h2>
-        <ProjectLinks />
+       
+         
+      
       </section>
 
       <Footer />

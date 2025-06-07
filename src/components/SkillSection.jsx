@@ -23,7 +23,7 @@ import BrLine200 from './BrLine200';
 export default function SkillsSection() {
   return (
     <section
-      className="bg-[#1c293a] text-white px-6 py-20 font-montserrat"
+      className="bg-[#1c293a] text-white px-6 py-20 font-montserrat rounded-xl"
       id="skills"
     >
       <div className="max-w-5xl mx-auto">

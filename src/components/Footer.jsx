@@ -26,20 +26,14 @@ export default function Footer() {
         <div className="flex-1 min-w-[250px]">
           <p className="uppercase font-semibold mb-4">Lenker</p>
           <ul className="space-y-2">
-            <li>
-              <Link to="/" className="hover:underline">
-                Hjem
-              </Link>
+           <li>
+              <Link to="/" className="hover:underline">Hjem</Link>
             </li>
             <li>
-              <Link to="/projects" className="hover:underline">
-                Prosjekter
-              </Link>
+              <Link to="/projectspage" className="hover:underline">Prosjekter</Link>
             </li>
             <li>
-              <Link to="/about" className="hover:underline">
-                Om meg
-              </Link>
+              <Link to="/about" className="hover:underline">Om meg</Link>
             </li>
           </ul>
         </div>
