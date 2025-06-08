@@ -36,7 +36,7 @@ export default function IntroRevealPortal() {
   const [showWords, setShowWords] = useState([]);
   const [startAnimation, setStartAnimation] = useState(false);
   const [showVideo, setShowVideo] = useState(false);
-  const [showExitFade, setShowExitFade] = useState(false);
+  const [fadeOut, setFadeOut] = useState(false);
   const navigate = useNavigate();
   const hasRunRef = useRef(false);
 
@@ -52,28 +52,32 @@ export default function IntroRevealPortal() {
         setTimeout(reveal, 1000);
       } else {
         setTimeout(() => setStartAnimation(true), 500);
-        setTimeout(() => setShowVideo(true), 2000);
+        setTimeout(() => setShowVideo(true), 1500);
         setTimeout(() => {
-          setShowExitFade(true);
-          setTimeout(() => navigate("/home"), 1000);
-        }, 6000);
+          setFadeOut(true);
+          setTimeout(() => navigate("/home"), 1200); // fade ut før navigate
+        }, 4500);
       }
     };
     reveal();
   }, [navigate]);
 
+  const handleSkip = () => {
+    setFadeOut(true);
+    setTimeout(() => navigate("/home"), 1000);
+  };
+
   return (
     <AnimatePresence>
-      {!showExitFade && (
+      {!fadeOut && (
         <motion.div
-          key="intro-wrapper"
+          key="intro"
           initial={{ opacity: 1 }}
-          animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 1 }}
           className="relative min-h-screen bg-black text-white overflow-hidden font-montserrat"
         >
-          {/* Video bakgrunn */}
+          {/* Video */}
           <AnimatePresence>
             {showVideo && (
               <motion.video
@@ -91,7 +95,7 @@ export default function IntroRevealPortal() {
             )}
           </AnimatePresence>
 
-          {/* Port-animasjon */}
+          {/* Dør-animasjon */}
           <AnimatePresence>
             {!startAnimation && (
               <>
@@ -129,6 +133,16 @@ export default function IntroRevealPortal() {
                 </motion.p>
               ))}
           </div>
+
+          {/* Skip Intro Button */}
+          {!showVideo && (
+            <button
+              onClick={handleSkip}
+              className="absolute bottom-10 right-10 z-50 bg-black/70 text-white px-4 py-2 text-sm rounded hover:bg-white hover:text-black transition"
+            >
+              Skip intro
+            </button>
+          )}
         </motion.div>
       )}
     </AnimatePresence>
