@@ -1,12 +1,13 @@
 // src/pages/Home.jsx
 import BrLine from '@components/BrLine';
-import ProjectLinks from '@components/ProjectLinks';
 import Footer from '@components/Footer';
 import Navbar from '@components/Navbar';
 import CarouselCards from '@components/CarouselCards';
 import Section from '@components/Section'; 
 import SkillsSection from '@components/SkillSection'; 
-import ContactInfo from '@components/ContactInfo';
+// Importer video først
+import blinkendevann from "../videos/blinkendevann.mp4";
+
 
 export default function Home() {
   return (
@@ -19,19 +20,29 @@ export default function Home() {
             </p>
             <BrLine />
             <p className="text-lg md:text-xl font-light tracking-wide">
-            med interesse for design, funksjon og digitale opplevelser.
+            med lidenskap for design, inovative løsninger og funksjoner og digitale opplevelser.
             </p>
             <BrLine />
         </section>
         </div>
 
-      <section className="w-full max-w-4xl text-center mb-20 px-6 mx-auto">
-        <BrLine />
-        
-        <SkillsSection />
-       
-        <BrLine />
-      </section>
+       <section className="relative w-full text-center mb-20 overflow-hidden">
+        {/* Bakgrunnsvideo i fullskjermbredde */}
+        <video
+            src={blinkendevann}
+            autoPlay
+            muted
+            loop
+            className="absolute inset-0 w-full h-full object-cover opacity-30 z-0"
+        />
+
+        {/* Innhold oppå video */}
+        <div className="relative z-10 max-w-4xl px-6 mx-auto">
+            <BrLine />
+            <SkillsSection />
+            <BrLine />
+        </div>
+        </section>
 
       {/* Carousel Cards seksjon */}
       <Section className="bg-[#1c293a] text-beige border-gray-800  py-12">
