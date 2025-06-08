@@ -13,16 +13,16 @@ export default function Home() {
   return (
     <>
       <Navbar />
-        <div className="bg-[#1c293a] mt-[180px] text-white min-h-screen px-6 pt-32 pb-20 flex flex-col items-start">
-        <section className="w-full max-w-4xl mb-20 text-left pl-20">
-            <p className="text-lg md:text-5xl font-light tracking-wide">
+        <div className="bg-[#1c293a] text-white min-h-screen px-6 pt-[180px] pb-20 flex flex-col items-start">
+        <section className="w-full max-w-4xl mb-20 text-center md:text-left md:pl-20 mx-auto lg:mt-10 lg:-ml-9">
+        <p className="text-lg md:text-5xl font-light tracking-wide">
             Frontend Developer
-            </p>
-            <BrLine />
-            <p className="text-lg md:text-xl font-light tracking-wide">
+        </p>
+        <BrLine />
+        <p className="text-lg md:text-xl font-light tracking-wide">
             med lidenskap for design, inovative løsninger og funksjoner og digitale opplevelser.
-            </p>
-            <BrLine />
+        </p>
+        <BrLine />
         </section>
         </div>
 
@@ -45,7 +45,7 @@ export default function Home() {
         </section>
 
       {/* Carousel Cards seksjon */}
-      <Section className="bg-[#1c293a] text-beige border-gray-800  py-12">
+      <Section className="bg-[#1c293a] text-beige border-gray-800 py-12 lg:flex lg:justify-center">
         <CarouselCards />
       </Section>
 

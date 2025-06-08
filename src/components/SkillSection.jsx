@@ -27,7 +27,7 @@ export default function SkillsSection() {
       id="skills"
     >
       <div className="max-w-5xl mx-auto">
-        <h2 className="text-3xl md:text-4xl font-thin text-center mb-16 tracking-widest uppercase">
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-thin text-center mb-16 tracking-widest uppercase">
           Min Frontend Kompetanse
         </h2>
         <BrLine200 />

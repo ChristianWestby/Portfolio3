@@ -8,27 +8,27 @@ const phrases = [
     text: "FRONTEND.",
     color: "text-white",
     weight: "font-bold",
-    size: "text-6xl tracking-tight",
+    size: "text-3xl sm:text-4xl md:text-6xl tracking-tight",
   },
   {
     text: "DESIGN.",
     color: "text-white",
     weight: "font-semibold",
-    size: "text-5xl tracking-tight",
-    boxStyle: "inline-block border border-white px-6 py-2 rounded",
+    size: "text-2xl sm:text-3xl md:text-5xl tracking-tight",
+    boxStyle: "inline-block border border-white px-4 py-1 sm:px-6 sm:py-2 rounded",
   },
   {
     text: "EXPERIENCE.",
     color: "text-gray-300",
     weight: "font-light",
-    size: "text-4xl tracking-wide",
-    boxStyle: "inline-block bg-neutral-900 px-4 py-2 border border-gray-700",
+    size: "text-lg sm:text-xl md:text-4xl tracking-wide",
+    boxStyle: "inline-block bg-neutral-900 px-3 py-1 sm:px-4 sm:py-2 border border-gray-700",
   },
   {
     text: "CODE.",
     color: "text-green-300",
     weight: "font-semibold",
-    size: "text-6xl tracking-tight",
+    size: "text-3xl sm:text-4xl md:text-6xl tracking-tight",
   },
 ];
 
