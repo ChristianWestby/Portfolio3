@@ -44,21 +44,21 @@ export default function IntroRevealPortal() {
     if (hasRunRef.current) return;
     hasRunRef.current = true;
 
-    let index = 0;
-    const reveal = () => {
-      if (index < phrases.length) {
-        setShowWords((prev) => [...prev, phrases[index]]);
-        index++;
-        setTimeout(reveal, 1000);
-      } else {
-        setTimeout(() => setStartAnimation(true), 500);
-        setTimeout(() => setShowVideo(true), 1500);
-        setTimeout(() => {
-          setFadeOut(true);
-          setTimeout(() => navigate("/home"), 1200); // fade ut før navigate
-        }, 4500);
-      }
-    };
+   let index = 0;
+      const reveal = () => {
+        if (index < phrases.length) {
+          setShowWords((prev) => [...prev, phrases[index]]);
+          index++;
+          setTimeout(reveal, 2000);
+        } else {
+          setTimeout(() => setStartAnimation(true), 500);      // Start døråpning
+          setTimeout(() => setShowVideo(true), 1500);          // Vis video
+          setTimeout(() => {
+            setFadeOut(true);                                  // Start fade ut
+            setTimeout(() => navigate("/home"), 2200);         // Vent lenger før navigasjon
+          }, 5000); // video vises litt lenger før fadeOut
+        }
+      };
     reveal();
   }, [navigate]);
 
@@ -90,7 +90,7 @@ export default function IntroRevealPortal() {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
-                transition={{ duration: 2 }}
+                transition={{ duration: 2, ease: "easeInOut" }}
               />
             )}
           </AnimatePresence>
