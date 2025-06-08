@@ -18,15 +18,15 @@ export default function Navbar() {
 
   return (
     <header
-      className={`fixed top-0 left-0 w-full z-50 transition-colors duration-300 border-b ${
+      className={`fixed top-0 left-0 w-full z-50 overflow-x-hidden transition-colors duration-300 border-b ${
         scrolled
           ? 'bg-beige text-[#1c293a] border-gray-300 shadow-md'
           : 'bg-[#1c293a] text-white border-beige/30'
       }`}
     >
-      <div className="relative h-[100px] md:h-[140px] lg:h-[180px] px-6 lg:px-12">
+      <div className="relative h-[100px] md:h-[140px] lg:h-[180px] px-4 sm:px-6 lg:px-12">
         {/* Logo venstre – skjules på mobil */}
-        <div className="hidden md:block absolute top-1/2 left-6 lg:left-20 transform -translate-y-1/2 z-10">
+        <div className="hidden md:block absolute top-1/2 left-4 sm:left-6 lg:left-20 transform -translate-y-1/2 z-10">
           <LogoSlimfunk className="scale-90 lg:scale-100" />
         </div>
 
@@ -36,7 +36,7 @@ export default function Navbar() {
         </div>
 
         {/* Navigasjon desktop – vises kun fra lg */}
-        <nav className="hidden lg:flex absolute top-1/2 right-6 lg:right-20 transform -translate-y-1/2 space-x-6 text-sm font-light tracking-wide">
+        <nav className="hidden lg:flex absolute top-1/2 right-4 sm:right-6 lg:right-20 transform -translate-y-1/2 space-x-6 text-sm font-light tracking-wide">
           <Link to="/home" className="hover:underline">Hjem</Link>
           <Link to="/projectspage" className="hover:underline">Prosjekter</Link>
           <Link to="/about" className="hover:underline">Om meg</Link>
@@ -45,7 +45,7 @@ export default function Navbar() {
 
         {/* Hamburger-knapp – vises under lg */}
         <button
-          className="lg:hidden absolute top-[75px] right-6 z-20"
+          className="lg:hidden absolute top-[75px] right-4 sm:right-6 z-20"
           onClick={() => setMenuOpen(!menuOpen)}
         >
           <div className="space-y-1">
@@ -58,7 +58,7 @@ export default function Navbar() {
 
       {/* Mobilmeny */}
       {menuOpen && (
-        <div className="lg:hidden absolute top-full left-0 w-full bg-[#1c293a] text-white py-8 text-center space-y-4">
+        <div className="lg:hidden absolute top-full left-0 w-full bg-[#1c293a] text-white py-8 text-center space-y-4 overflow-x-hidden">
           <Link to="/home" onClick={() => setMenuOpen(false)} className="block text-lg">Hjem</Link>
           <Link to="/projectspage" onClick={() => setMenuOpen(false)} className="block text-lg">Prosjekter</Link>
           <Link to="/about" onClick={() => setMenuOpen(false)} className="block text-lg">Om meg</Link>

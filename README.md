@@ -1,12 +1,29 @@
-# React + Vite
+# Portfolio 2 – Christian Westby
+ (Heter Portfolio 3)
+Dette er mitt andre porteføljeprosjekt ved Noroff (Portfolio 2). 
+Prosjektet viser tre utvalgte og forbedrede oppgaver fra mitt frontend-studium, med nytt design og struktur.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 🔗 Lenker
 
-Currently, two official plugins are available:
+- 🎯 Live Portfolio: [christiansportfolio3.netlify.app](https://christiansportfolio3.netlify.app)
+- 📂 GitHub repo: [ChristianWestby/portfolio3](https://github.com/ChristianWestby/portfolio3)
+- 📁 Prosjekter:
+  - Holidaze: [Live](https://holidaze-christian.netlify.app) • [GitHub](https://github.com/ChristianWestby/holidaze-christian)
+  - eComShop: [Live](https://tiny-beijinho-ef8822.netlify.app) • [GitHub](https://github.com/ChristianWestby/ecom-js-frontend)
+  - Pet Adoption: [Live](https://delicate-empanada-a9f173.netlify.app) • [GitHub](https://github.com/ChristianWestby/pet-adoption-exam)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🧠 Om prosjektet
 
-## Expanding the ESLint configuration
+- Bygget i React 18.2.2 + Vite + Tailwind 3.3.3 CSS
+- Responsiv for 300px, 768px og 1024px+
+- Hero-intro med video og animasjon
+- Hver prosjektkort åpner egen artikkelside
+- Design inspirert av Six Senses & Belmond
+- Ingen bruk av UI-libraries eller ikoner – alt håndlaget
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+
+## 🚀 Teknisk oppsett
+
+1. Klon repo: `git clone https://github.com/ChristianWestby/portfolio3.git`
+2. Installer avhengigheter: `npm install`
+3. Start lokalt: `npm run dev`

@@ -75,7 +75,6 @@ export default function SkillsSection() {
               <li className="flex items-center gap-2"><FaReact /> React</li>
               <li className="flex items-center gap-2"><SiVite /> Vite</li>
               <li className="flex items-center gap-2"><SiTailwindcss /> Tailwind CSS</li>
-              <li className="flex items-center gap-2"><FaReact /> React Router</li>
             </ul>
           </div>
 
